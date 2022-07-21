@@ -39,18 +39,16 @@ int[] RowSum(int[,] array)
             perRow = perRow + array[i, j];
         }
         sum[i] = perRow;
-        System.Console.WriteLine();
     }
     return sum;
 }
 
 int Small(int[] array)
 {
-    int ans = 0;
     int min = array[0];
     for(int i = 0; i < array.Length; i++)
     {
-        if (array[i] > array[i] + 1)
+        if (array[i] < min)
         {
             min = array[i];
         }
